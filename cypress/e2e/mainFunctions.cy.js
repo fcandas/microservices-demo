@@ -126,4 +126,11 @@ describe('WeaveSock Test', () => {
       cy.checkTwoFilter();
          
     })
+
+  it ('Get method', () => {
+
+      cy.checkUser();
+         
+    })
+  
 })

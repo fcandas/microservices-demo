@@ -236,3 +236,25 @@ Cypress.Commands.add('checkTwoFilter', () => {
     objects.clickApply().should('be.visible').click();
     
 })
+
+Cypress.Commands.add('checkUser', () => {
+
+    cy.request({
+        method : 'GET',
+        url : 'http://localhost/customers',
+    }).then(function(response){
+        const target = (response.body._embedded);
+        
+        cy.log(target[1]);
+        cy.log(target.length);
+
+        //console.log(response.body[12]);
+        //expect(response.body).have.property('url');
+        //expect(response.body.data).have.property('Eve_Berger')
+    });
+    
+})
+
+
+
+
