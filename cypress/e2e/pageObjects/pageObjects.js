@@ -57,7 +57,7 @@ class Objects{
     }
 
     clickCatalogue(){
-        return cy.get('li[id=tabCatalogue]')
+        return cy.get('a[class="dropdown-toggle"]')
     }
 
     clickFilterFirst(){
@@ -73,6 +73,62 @@ class Objects{
     clickApply(){
         return cy.get('a[class="btn btn-default btn-sm btn-primary"]')
     
+    }
+    
+    addToCart(){
+        return cy.get('i[class="fa fa-shopping-cart"]').eq(2)
+    }
+
+    clickMainCart(){
+        return cy.get('i[class="fa fa-shopping-cart"]').eq(1)
+    }
+
+    clickAddresChange(){
+        return cy.get('a[data-target="#address-modal"]')
+    }
+
+    clickPaymentChange(){
+        return cy.get('a[data-target="#card-modal"]')
+    }
+
+    houseNumber(){
+        return cy.get('input[id="form-number"]')
+    }
+
+    streetName(){
+        return cy.get('input[id="form-street"]')
+    }
+
+    cityName(){
+        return cy.get('input[id="form-city"]')
+    }
+
+    postCode(){
+        return cy.get('input[id="form-post-code"]')
+    }
+
+    countryName(){
+        return cy.get('input[id="form-country"]')
+    }
+
+    updateButton(){
+        return cy.get('button[class="btn btn-primary"]').eq(4)
+    }
+
+    formCardNumber(){
+        return cy.get('input[id="form-card-number"]')
+    }
+
+    formExpire(){
+        return cy.get('input[id="form-expires"]')
+    }
+    
+    formCCV(){
+        return cy.get('input[id="form-ccv"]')
+    }
+
+    proceedToCheckout(){
+        return cy.get('button[id="orderButton"]')
     }
     
     

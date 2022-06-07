@@ -115,18 +115,6 @@ describe('WeaveSock Test', () => {
          
     })
 
-    it ('Check first checkbox and filter', () => {
-
-      cy.checkFirstFilter();
-         
-    })
-
-  it ('Check two checkbox and filter', () => {
-
-      cy.checkTwoFilter();
-         
-    })
-
   it ('Get method', () => {
 
       cy.checkUser();

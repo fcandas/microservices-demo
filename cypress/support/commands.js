@@ -224,6 +224,7 @@ Cypress.Commands.add('trySqlInjection', () => {
 
 Cypress.Commands.add('checkFirstFilter', () => {
 
+    objects.clickCatalogue().should('be.visible').click();
     objects.clickFilterFirst().should('be.visible').click();
     objects.clickApply().should('be.visible').click();
     
@@ -231,11 +232,69 @@ Cypress.Commands.add('checkFirstFilter', () => {
 
 Cypress.Commands.add('checkTwoFilter', () => {
 
+    objects.clickCatalogue().should('be.visible').click();
     objects.clickFilterFirst().should('be.visible').click();
     objects.clickFilterLast().should('be.visible').click();
     objects.clickApply().should('be.visible').click();
     
 })
+
+Cypress.Commands.add('addToCart', () => {
+
+    objects.addToCart().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('checkMainCart', () => {
+
+    objects.clickMainCart().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('changeAddress', () => {
+
+    objects.clickAddresChange().should('be.visible').click();
+    objects.houseNumber().should('be.visible').type(Date.now().toString());
+    objects.streetName().should('be.visible').type(Date.now().toString());
+    objects.cityName().should('be.visible').type(Date.now().toString());
+    objects.postCode().should('be.visible').type(Date.now().toString());
+    objects.countryName().should('be.visible').type(Date.now().toString());
+    objects.updateButton().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('getEmptyAddress', () => {
+
+    objects.clickAddresChange().should('be.visible').click();
+    objects.updateButton().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('changePayment', () => {
+
+    objects.clickPaymentChange().should('be.visible').click();
+    objects.formCardNumber().should('be.visible').type(Date.now().toString());
+    objects.formExpire().should('be.visible').type(Date.now().toString());
+    objects.formCCV().should('be.visible').type(Date.now().toString());
+    objects.updateButton().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('getEmptyPayment', () => {
+
+    objects.clickPaymentChange().should('be.visible').click();
+    objects.updateButton().should('be.visible').click();
+ 
+})
+
+Cypress.Commands.add('proceedToCheckout', () => {
+
+    objects.proceedToCheckout().should('be.visible').click();
+    
+ 
+})
+
+
 
 Cypress.Commands.add('checkUser', () => {
 
