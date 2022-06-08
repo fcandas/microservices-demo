@@ -43,7 +43,7 @@ Cypress.Commands.add('createUserWithEmptyName', () => {
     objects.email().should('be.visible').type(Date.now().toString()+'@'+Date.now().toString()+'.com');
     objects.password().should('be.visible').type(Date.now().toString());
     objects.clickRegisterButton().click();
-    //objects.alertMsg().should('have.text','There was a problem with your registration: Internal Server Error');
+    objects.alertMsg().should('have.text','There was a problem with your registration: Internal Server Error');
     objects.closeButtonOnRegister().click();
   
 })
@@ -69,7 +69,7 @@ Cypress.Commands.add('createUserWithEmptyEmail', () => {
     objects.lastname().should('be.visible').type(Date.now().toString());
     objects.password().should('be.visible').type(Date.now().toString());
     objects.clickRegisterButton().click();
-    //objects.alertMsg().should('have.text','There was a problem with your registration: Internal Server Error');
+    objects.alertMsg().should('have.text','There was a problem with your registration: Internal Server Error');
     objects.closeButtonOnRegister().click();
   
 })
