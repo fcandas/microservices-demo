@@ -27,8 +27,17 @@ To Run On your computer
 You should have docker and docker compose.
 ```
 ```bash
+
 Inside the project directory
+
+To run docker 
+
+docker-compose -f deploy/docker-compose/docker-compose.yml up -d
+
+To run cypress
+
 npx cypress open
+
 ```
 
 To Run headless

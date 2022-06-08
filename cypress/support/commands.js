@@ -300,11 +300,11 @@ Cypress.Commands.add('checkUser', () => {
 
     cy.request({
         method : 'GET',
-        url : 'http://localhost/customers',
+        url : 'http://localhost/customers/57a98d98e4b00679b4a830af',
     }).then(function(response){
-        const target = (response.body._embedded);
+        const target = (response.body);
         
-        cy.log(target[1]);
+        cy.log(target);
         cy.log(target.length);
 
         //console.log(response.body[12]);
