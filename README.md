@@ -48,6 +48,6 @@ npx cypress run
 
 
 ```bash
-To check all the scenarios, please check /TestDocs/Test Scenarios.xlsx
-To check defect details, please check /TestDocs/Defect list.xlsx
+To check all the scenarios, please check /Test Scenarios.xlsx
+To check defect details, please check /Defect list.xlsx
 ```
