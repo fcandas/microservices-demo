@@ -1,7 +1,7 @@
 # microservices-demo-test
 
 WeaveSock test 
-![cypress version](https://img.shields.io/badge/cypress-9.5.0-brightgreen)
+![cypress version](https://img.shields.io/badge/cypress-10.0.3-brightgreen)
 
 
 Requirements
